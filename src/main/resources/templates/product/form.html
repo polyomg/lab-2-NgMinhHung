@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Nhập sản phẩm</h2>
+	<form action="/product/save" method="post">
+		<input type=text name="name" placeholder="Tên sản phẩm"> <input
+			type=number step="0.01" name="price" placeholder="Giá">
+		<button>Save</button>
+	</form>
+
+	<hr>
+	<ul>
+		<li>Name: <span th:text="${product.name}"></span></li>
+		<li>Price: <span th:text="${product.price}"></span></li>
+
+	</ul>
+</body>
+</html>
